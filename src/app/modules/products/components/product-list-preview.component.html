@@ -1,0 +1,19 @@
+<div class="ibox">
+  <div class="ibox-content product-box">
+    <img src="{{ product.image }}" class="card-img"
+         alt="{{ product.name }}">
+    <div class="product-desc">
+      <span class="product-price">{{ product.price }}円</span>
+      <small class="text-muted">{{ product.model }}</small>
+      <a [routerLink]="product.id" class="product-name"> {{ product.name }} </a>
+      <div class="small m-t-xs">
+        {{ product.description }}
+      </div>
+      <div class="row row-cols-2">
+        <div class="col">
+          <a [routerLink]="product.id" class="btn btn-xs btn-outline btn-info">Details </a></div>
+        <div class="col"><a class="btn btn-xs btn-outline btn-success" (click)="addToCart()">Add To Cart</a></div>
+      </div>
+    </div>
+  </div>
+</div>

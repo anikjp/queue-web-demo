@@ -1,0 +1,14 @@
+<div class="row pb-4">
+  <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+    <div class="d-flex justify-content-center" *ngIf="loading | async ">
+      <div class="row spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="!(loading | async)">
+  <div class="col-md-3" *ngFor="let product of products | async ; let i=index">
+    <app-product-list-preview [product]="product" ></app-product-list-preview>
+  </div>
+</div>

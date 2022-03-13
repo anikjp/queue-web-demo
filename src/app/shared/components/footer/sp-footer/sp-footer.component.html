@@ -1,0 +1,16 @@
+<footer class="footer">
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/"><i class="fas fa-home mr-1"></i>Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/products"><i class="fas fa-shopping-basket mr-1"></i>Products</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart mr-1"></i>Cart <span class="badge badge-light"> {{totalCart | async}} </span></a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" routerLink="/about"><i class="fas fa-newspaper"></i>About</a>
+    </li>
+  </ul>
+</footer>

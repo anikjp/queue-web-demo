@@ -1,0 +1,20 @@
+<ng-container *ngIf="!layoutSettings.collapsed">
+  <ng-content select="ng-container[header]"></ng-content>
+</ng-container>
+
+<ng-container *ngIf="layoutSettings.collapsed">
+  <ng-content select="ng-container[sp-header]"></ng-content>
+</ng-container>
+
+
+<ng-container>
+  <ng-content select="ng-container[content]"></ng-content>
+</ng-container>
+
+<ng-container *ngIf="!layoutSettings.collapsed">
+  <ng-content select="ng-container[footer]"></ng-content>
+</ng-container>
+
+<ng-container *ngIf="layoutSettings.collapsed">
+  <ng-content select="ng-container[sp-footer]"></ng-content>
+</ng-container>

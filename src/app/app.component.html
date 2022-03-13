@@ -1,0 +1,23 @@
+<app-layout [layoutSettings]="layoutSettings">
+  <ng-container header>
+    <app-header></app-header>
+  </ng-container>
+
+  <ng-container sp-header>
+    <app-sp-header></app-sp-header>
+  </ng-container>
+
+  <ng-container content>
+    <div class="app">
+      <router-outlet></router-outlet>
+    </div>
+  </ng-container>
+
+  <ng-container footer>
+    <app-footer></app-footer>
+  </ng-container>
+
+  <ng-container sp-footer>
+    <app-sp-footer></app-sp-footer>
+  </ng-container>
+</app-layout>

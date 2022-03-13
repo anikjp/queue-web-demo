@@ -1,0 +1,19 @@
+<header>
+  <nav class="navbar fixed-top fixed-topnavbar-light bg-light">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="https://queue.onixoni.com/assets/icons/queue.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      ANT Queue Demo Site
+    </a>
+    <div class="input-group header_search">
+      <input type="text" class="form-control" placeholder="Search your product">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-search mr-1"></i></span>
+      </div>
+    </div>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group" role="group" aria-label="Third group">
+        <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/cart"><i class="fas fa-shopping-cart mr-1"></i> Cart <span class="badge badge-light"> {{totalCart | async}} </span></button>
+      </div>
+    </div>
+  </nav>
+</header>

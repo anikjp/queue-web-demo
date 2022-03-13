@@ -1,0 +1,77 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h3 class="jumbotron-heading">SHOPPING CART</h3>
+  </div>
+</section>
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col"> </th>
+            <th scope="col">Product</th>
+            <th scope="col">Available</th>
+            <th scope="col" class="text-center">Quantity</th>
+            <th scope="col" class="text-right">Price</th>
+            <th> </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let cart of carts | async ; let i=index ">
+            <td><img src="{{cart.image}}" class="cart-image"/> </td>
+            <td>{{cart.name }}</td>
+            <td>In stock</td>
+            <td><input class="form-control" type="text" value="1" /></td>
+            <td class="text-right">{{cart.price }}円</td>
+            <td class="text-right"><button class="btn btn-sm btn-danger" (click)="deleteFromCart(cart.id)"><i class="fa fa-trash"></i> </button> </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Sub-Total</td>
+            <td class="text-right">{{totalAmountBeforeTax| async}}円</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Shipping</td>
+            <td class="text-right">{{shipping| async}}円</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Tax</td>
+            <td class="text-right">{{totalTax| async}}円</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><strong>Total</strong></td>
+            <td class="text-right"><strong>{{totalAmountAfterTax| async}}円</strong></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col mb-2">
+      <div class="row">
+        <div class="col-sm-12  col-md-6">
+          <button class="btn btn-block btn-light">Continue Shopping</button>
+        </div>
+        <div class="col-sm-12 col-md-6 text-right">
+          <button class="btn btn-lg btn-block btn-success text-uppercase" [routerLink]="'complete'">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

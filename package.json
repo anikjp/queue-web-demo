@@ -45,7 +45,7 @@
     "@ngrx/schematics": "^9.0.0",
     "@ngrx/store": "^9.0.0",
     "@ngrx/store-devtools": "^9.0.0",
-    "@nguniversal/express-engine": "9.0.1",
+    "@nguniversal/express-engine": "^12.1.0",
     "bootstrap": "4.4.1",
     "chart.js": "2.9.3",
     "core-js": "3.6.4",

@@ -5,6 +5,7 @@ import {select, Store} from '@ngrx/store';
 import * as fromCarts from '@app/modules/cart/stores/reducers';
 import {selectCartsCollections, getTotalAmountBeforeTax, getSearchLoading, getTotalTax, getTotalAmountAfterTax, getShippingCost} from '@app/modules/cart/stores/selectors';
 import {deleteCart} from '@app/modules/cart/stores/actions';
+import {QueueService} from '@app/shared/queue-service/queue.service';
 
 @Component({
   selector: 'app-cart',

@@ -30,7 +30,7 @@ import {extModules} from '../build-specifics';
     extModules,
     DBModule.provideDB(schema)
   ],
-  providers: [],
+  providers: [{provide: Window, useValue: window}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
